@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qDB-pd-ApJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qDB-pd-ApJ">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -23,6 +23,7 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Back" translatesAutoresizingMaskIntoConstraints="NO" id="Jio-xt-m2Y">
                                 <rect key="frame" x="272" y="80" width="240" height="320"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="8Ds-mm-sRG"/>
                                     <constraint firstAttribute="height" constant="320" id="Egb-gn-4bh"/>
@@ -116,6 +117,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.047058823529411764" blue="0.094117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="x4g-tt-CVg" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="3Bq-Bf-opI"/>
                             <constraint firstItem="x4g-tt-CVg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="3qT-lA-rjV"/>
@@ -148,9 +150,17 @@
                                 <include reference="uEa-ua-HAx"/>
                             </mask>
                         </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="wt0-CY-ZQk" appends="YES" id="C8k-vJ-YYW"/>
+                            <outletCollection property="gestureRecognizers" destination="rEJ-ug-so3" appends="YES" id="EHu-f9-Rns"/>
+                            <outletCollection property="gestureRecognizers" destination="KUh-wh-hPJ" appends="YES" id="H8W-mC-369"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="EJy-6W-9sY"/>
                     <connections>
+                        <outlet property="gestureCollectionChain" destination="KUh-wh-hPJ" id="J6G-Eb-KjX"/>
+                        <outlet property="gestureNewChain" destination="rEJ-ug-so3" id="2tl-MR-0Xk"/>
+                        <outlet property="gestureNewScene" destination="wt0-CY-ZQk" id="ZaU-eo-E4V"/>
                         <outlet property="logic" destination="2FO-va-vXQ" id="LvW-3N-QZ1"/>
                         <segue destination="R4R-vZ-cIB" kind="show" identifier="ChainList" id="xfc-gY-FDI"/>
                         <segue destination="QWG-az-X1q" kind="show" identifier="discardList" id="Hl2-Oi-Ygl"/>
@@ -247,6 +257,21 @@
                         <constraint firstItem="bvW-9f-Kgw" firstAttribute="top" secondItem="swx-kA-cLI" secondAttribute="top" constant="20" id="zvl-mT-2Sj"/>
                     </constraints>
                 </view>
+                <swipeGestureRecognizer direction="left" id="wt0-CY-ZQk">
+                    <connections>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="EIm-RB-pz3"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="rEJ-ug-so3">
+                    <connections>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="You-BR-DNt"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="KUh-wh-hPJ">
+                    <connections>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="1x9-WK-yPz"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
         </scene>

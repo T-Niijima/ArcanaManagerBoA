@@ -39,6 +39,9 @@
     // --- スリープ有効／無効設定
     [self applySleepConfig];
     
+    // --- NSUserDefaultの初期値設定
+    [self registerDefaultValue];
+    
     return YES;
 }
 
@@ -87,5 +90,31 @@
 -(void)resumeTimerDisabled {
     [[UIApplication sharedApplication] setIdleTimerDisabled:NO];
 }
+
+-(void)registerDefaultValue{
+    
+    NSUserDefaults* ud = [NSUserDefaults standardUserDefaults];
+    
+    NSString* bundlePath = [[NSBundle mainBundle] bundlePath];
+    NSString* settingsPath = [bundlePath stringByAppendingPathComponent:@"Settings.bundle"];
+    NSString* plistFile = [settingsPath stringByAppendingPathComponent:@"Root.plist"];
+    
+    NSDictionary* dic = [NSDictionary dictionaryWithContentsOfFile:plistFile];
+    NSArray* arrPreferences = [dic objectForKey:@"PreferenceSpecifiers"];
+    
+    NSMutableDictionary* dicDefaultValue = [NSMutableDictionary dictionary];
+    for(NSDictionary* dicItem in arrPreferences){
+        
+        NSString* strKey = dicItem[@"Key"];
+        
+        id defaultValue = dicItem[@"DefaultValue"];
+        
+        if (strKey && defaultValue) {
+            [dicDefaultValue setValue:defaultValue forKey:strKey];
+        }
+    }
+    [ud registerDefaults:dicDefaultValue];
+}
+
 
 @end

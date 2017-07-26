@@ -48,6 +48,72 @@
 			<key>DefaultValue</key>
 			<true/>
 		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Title</key>
+			<string>左スワイプでシーン変更</string>
+			<key>Key</key>
+			<string>option_NumberOfTouchForNewScene</string>
+			<key>DefaultValue</key>
+			<integer>2</integer>
+			<key>Titles</key>
+			<array>
+				<string>無効</string>
+				<string>1本指</string>
+				<string>2本指</string>
+			</array>
+			<key>Values</key>
+			<array>
+				<integer>0</integer>
+				<integer>1</integer>
+				<integer>2</integer>
+			</array>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Title</key>
+			<string>上スワイプで鎖を渡す</string>
+			<key>Key</key>
+			<string>option_NumberOfTouchForNewChain</string>
+			<key>DefaultValue</key>
+			<integer>0</integer>
+			<key>Titles</key>
+			<array>
+				<string>無効</string>
+				<string>1本指</string>
+				<string>2本指</string>
+			</array>
+			<key>Values</key>
+			<array>
+				<integer>0</integer>
+				<integer>1</integer>
+				<integer>2</integer>
+			</array>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Title</key>
+			<string>下スワイプで鎖を戻す</string>
+			<key>Key</key>
+			<string>option_NumberOfTouchForCollectionChain</string>
+			<key>DefaultValue</key>
+			<integer>0</integer>
+			<key>Titles</key>
+			<array>
+				<string>無効</string>
+				<string>1本指</string>
+				<string>2本指</string>
+			</array>
+			<key>Values</key>
+			<array>
+				<integer>0</integer>
+				<integer>1</integer>
+				<integer>2</integer>
+			</array>
+		</dict>
 	</array>
 </dict>
 </plist>

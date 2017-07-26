@@ -9,9 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "MainVCLogic.h"
 
-@interface MainViewController : UIViewController
+@interface MainViewController : UIViewController<UIGestureRecognizerDelegate>
 
 @property(nonatomic, strong)IBOutlet MainVCLogic* logic;
+@property(nonatomic, weak)IBOutlet UISwipeGestureRecognizer* gestureNewScene;
+@property(nonatomic, weak)IBOutlet UISwipeGestureRecognizer* gestureNewChain;
+@property(nonatomic, weak)IBOutlet UISwipeGestureRecognizer* gestureCollectionChain;
 
 @end
 

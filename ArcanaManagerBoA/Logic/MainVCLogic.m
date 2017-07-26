@@ -365,6 +365,7 @@
     resetButton.backgroundColor = [UIColor orangeColor];    // 表示した後で変える
 }
 
+#pragma mark - 初期値設定
 #pragma mark - Delegate
 
 -(UIViewController*)documentInteractionControllerViewControllerForPreview:(UIDocumentInteractionController *)controller {
