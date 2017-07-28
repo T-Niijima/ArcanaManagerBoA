@@ -25,16 +25,51 @@
                                 <rect key="frame" x="272" y="80" width="240" height="320"/>
                                 <gestureRecognizers/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="360" id="1dY-u8-BhL"/>
+                                    <constraint firstAttribute="height" constant="480" id="58v-dY-lII"/>
                                     <constraint firstAttribute="width" constant="240" id="8Ds-mm-sRG"/>
                                     <constraint firstAttribute="height" constant="320" id="Egb-gn-4bh"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="8Ds-mm-sRG"/>
+                                        <exclude reference="Egb-gn-4bh"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="1dY-u8-BhL"/>
+                                        <exclude reference="58v-dY-lII"/>
+                                        <include reference="8Ds-mm-sRG"/>
+                                        <include reference="Egb-gn-4bh"/>
+                                    </mask>
+                                </variation>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PgQ-m4-RwS">
                                 <rect key="frame" x="16" y="80" width="240" height="320"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="320" id="N6u-Vk-xa4"/>
                                     <constraint firstAttribute="width" constant="240" id="XXn-M2-vwh"/>
+                                    <constraint firstAttribute="height" constant="480" id="sGC-gN-WpO"/>
+                                    <constraint firstAttribute="width" constant="360" id="w2o-qm-ptY"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="N6u-Vk-xa4"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="N6u-Vk-xa4"/>
+                                        <exclude reference="sGC-gN-WpO"/>
+                                        <exclude reference="w2o-qm-ptY"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <exclude reference="XXn-M2-vwh"/>
+                                    </mask>
+                                </variation>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="x4g-tt-CVg">
                                 <rect key="frame" x="184" y="28" width="120" height="40"/>
@@ -54,7 +89,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="vrZ-8R-Dj7">
-                                <rect key="frame" x="223.5" y="420" width="40" height="40"/>
+                                <rect key="frame" x="224" y="420" width="40" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="8eZ-1S-691"/>
@@ -154,13 +189,18 @@
                             <outletCollection property="gestureRecognizers" destination="wt0-CY-ZQk" appends="YES" id="C8k-vJ-YYW"/>
                             <outletCollection property="gestureRecognizers" destination="rEJ-ug-so3" appends="YES" id="EHu-f9-Rns"/>
                             <outletCollection property="gestureRecognizers" destination="KUh-wh-hPJ" appends="YES" id="H8W-mC-369"/>
+                            <outletCollection property="gestureRecognizers" destination="8ff-ZP-jNI" appends="YES" id="myd-aN-jtW"/>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="EJy-6W-9sY"/>
                     <connections>
+                        <outlet property="btnCollectChain" destination="qnD-N7-X04" id="3CK-tE-RzC"/>
+                        <outlet property="btnNewChain" destination="x4g-tt-CVg" id="PJ1-cb-sby"/>
+                        <outlet property="btnNewScene" destination="Z1h-4D-qs2" id="Nvm-DJ-RAn"/>
                         <outlet property="gestureCollectionChain" destination="KUh-wh-hPJ" id="J6G-Eb-KjX"/>
                         <outlet property="gestureNewChain" destination="rEJ-ug-so3" id="2tl-MR-0Xk"/>
                         <outlet property="gestureNewScene" destination="wt0-CY-ZQk" id="ZaU-eo-E4V"/>
+                        <outlet property="gestureTap" destination="8ff-ZP-jNI" id="q8O-Vq-khs"/>
                         <outlet property="logic" destination="2FO-va-vXQ" id="LvW-3N-QZ1"/>
                         <segue destination="R4R-vZ-cIB" kind="show" identifier="ChainList" id="xfc-gY-FDI"/>
                         <segue destination="QWG-az-X1q" kind="show" identifier="discardList" id="Hl2-Oi-Ygl"/>
@@ -187,7 +227,7 @@
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZN-Nx-w9M">
-                            <rect key="frame" x="97.5" y="400" width="120" height="40"/>
+                            <rect key="frame" x="98" y="400" width="120" height="40"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="120" id="GOe-P6-hpw"/>
@@ -204,9 +244,29 @@
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EjO-Wj-FSB">
                             <rect key="frame" x="37" y="70" width="240" height="320"/>
                             <constraints>
+                                <constraint firstAttribute="height" constant="480" id="ItG-RS-CrQ"/>
                                 <constraint firstAttribute="width" constant="240" id="Jp0-kA-xph"/>
                                 <constraint firstAttribute="height" constant="320" id="xTE-cG-fZo"/>
+                                <constraint firstAttribute="width" constant="360" id="yHa-oX-Fh9"/>
                             </constraints>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="xTE-cG-fZo"/>
+                                    <exclude reference="yHa-oX-Fh9"/>
+                                </mask>
+                            </variation>
+                            <variation key="heightClass=regular-widthClass=compact">
+                                <mask key="constraints">
+                                    <exclude reference="ItG-RS-CrQ"/>
+                                    <include reference="xTE-cG-fZo"/>
+                                </mask>
+                            </variation>
+                            <variation key="heightClass=regular-widthClass=regular">
+                                <mask key="constraints">
+                                    <exclude reference="Jp0-kA-xph"/>
+                                    <include reference="yHa-oX-Fh9"/>
+                                </mask>
+                            </variation>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvW-9f-Kgw">
                             <rect key="frame" x="259" y="20" width="40" height="40"/>
@@ -272,6 +332,11 @@
                         <outlet property="delegate" destination="BYZ-38-t0r" id="1x9-WK-yPz"/>
                     </connections>
                 </swipeGestureRecognizer>
+                <tapGestureRecognizer id="8ff-ZP-jNI">
+                    <connections>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="f5R-Nt-hxc"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
         </scene>

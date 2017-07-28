@@ -15,6 +15,10 @@
 @property(nonatomic, weak)IBOutlet UISwipeGestureRecognizer* gestureNewScene;
 @property(nonatomic, weak)IBOutlet UISwipeGestureRecognizer* gestureNewChain;
 @property(nonatomic, weak)IBOutlet UISwipeGestureRecognizer* gestureCollectionChain;
+@property(nonatomic, weak)IBOutlet UITapGestureRecognizer* gestureTap;
+@property(nonatomic, weak)IBOutlet UIButton* btnNewScene;
+@property(nonatomic, weak)IBOutlet UIButton* btnNewChain;
+@property(nonatomic, weak)IBOutlet UIButton* btnCollectChain;
 
 @end
 

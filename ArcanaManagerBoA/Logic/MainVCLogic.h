@@ -34,4 +34,5 @@
 -(void)showEmptyChainAlert;
 -(void)showSpecialActionSheet:(UIButton*)sender;
 
+-(void)showSwipeGuideWithOrigin:(CGPoint)origin imageName:(NSString*)imageName;
 @end

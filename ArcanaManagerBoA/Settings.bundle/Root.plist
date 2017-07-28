@@ -114,6 +114,26 @@
 				<integer>2</integer>
 			</array>
 		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+			<key>Title</key>
+			<string>タップで操作ガイド表示</string>
+			<key>Key</key>
+			<string>option_TapToShowGuide</string>
+			<key>DefaultValue</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+			<key>Title</key>
+			<string>スワイプ可ならボタンを消す</string>
+			<key>Key</key>
+			<string>option_HideButtonIfSwaipable</string>
+			<key>DefaultValue</key>
+			<false/>
+		</dict>
 	</array>
 </dict>
 </plist>

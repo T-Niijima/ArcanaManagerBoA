@@ -365,6 +365,19 @@
     resetButton.backgroundColor = [UIColor orangeColor];    // 表示した後で変える
 }
 
+-(void)showSwipeGuideWithOrigin:(CGPoint)origin imageName:(NSString*)imageName {
+    // スワイプガイドを表示する（そして消す）
+    UIImageView* iv = [[UIImageView alloc] initWithFrame:CGRectMake(origin.x, MAX(origin.y - 44,0), 200, 44)];
+    [iv setImage:[UIImage imageNamed:imageName]];
+    [iv setAlpha:0.6f];
+    [self.vc.view addSubview:iv];
+    [UIView animateWithDuration:1.0f animations:^{
+        [iv setAlpha:0.0f];
+    } completion:^(BOOL finished){
+        [iv removeFromSuperview];
+    }];
+}
+
 #pragma mark - 初期値設定
 #pragma mark - Delegate
 

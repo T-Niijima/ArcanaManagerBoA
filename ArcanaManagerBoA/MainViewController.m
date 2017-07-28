@@ -50,6 +50,10 @@
         self.gestureNewScene.enabled = NO;
     } else {
         self.gestureNewScene.numberOfTouchesRequired = numberOfTouchForNewScene;
+        if ([ud boolForKey:@"option_HideButtonIfSwaipable"]) {
+            // --- スワイプ有効ならボタンを消す
+            self.btnNewScene.hidden = YES;
+        }
     }
     
     NSInteger numberOfTouchForNewChain = [ud integerForKey:@"option_NumberOfTouchForNewChain"];
@@ -58,6 +62,10 @@
         self.gestureNewChain.enabled = NO;
     } else {
         self.gestureNewChain.numberOfTouchesRequired = numberOfTouchForNewChain;
+        if ([ud boolForKey:@"option_HideButtonIfSwaipable"]) {
+            // --- スワイプ有効ならボタンを消す
+            self.btnNewChain.hidden = YES;
+        }
     }
     
     NSInteger numberOfTouchForCollectionChain = [ud integerForKey:@"option_NumberOfTouchForCollectionChain"];
@@ -66,8 +74,16 @@
         self.gestureCollectionChain.enabled = NO;
     } else {
         self.gestureCollectionChain.numberOfTouchesRequired = numberOfTouchForCollectionChain;
+        if ([ud boolForKey:@"option_HideButtonIfSwaipable"]) {
+            // --- スワイプ有効ならボタンを消す
+            self.btnCollectChain.hidden = YES;
+        }
     }
     
+    // --- ガイド表示をする
+    if (![ud boolForKey:@"option_TapToShowGuide"]) {
+        self.gestureTap.enabled = NO;
+    }
     
     // --- iPhone4の場合、高さが足りないので文字列でのアルカナ表示をしない
     if (self.view.frame.size.height <= 480) {
@@ -160,8 +176,19 @@
     } else if ([gestureRecognizer isEqual:self.gestureCollectionChain]) {
         // --- 鎖を返す
         [self tapBtnReturnChain:nil];
+    } else if ([gestureRecognizer isEqual:self.gestureTap]) {
+        CGPoint pos = [gestureRecognizer locationInView:self.view];
+        NSUserDefaults* ud = [NSUserDefaults standardUserDefaults];
+        if ([ud integerForKey:@"option_NumberOfTouchForNewScene"] > 0) {
+            [self.logic showSwipeGuideWithOrigin:CGPointMake(MAX(0, pos.x - 100), pos.y) imageName:@"GuideNewScene"];
+        }
+        if ([ud integerForKey:@"option_NumberOfTouchForNewChain"] > 0) {
+            [self.logic showSwipeGuideWithOrigin:CGPointMake(MAX(0, pos.x - 50), pos.y - 44) imageName:@"GuideChain"];
+        }
+        if ([ud integerForKey:@"option_NumberOfTouchForCollectionChain"] > 0) {
+            [self.logic showSwipeGuideWithOrigin:CGPointMake(MAX(0, pos.x - 50), pos.y + 44) imageName:@"GuideCollect"];
+        }
     }
-
     return YES;
 }
 
