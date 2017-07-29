@@ -120,18 +120,36 @@
     // 山札が空になった通知を表示
     NSString* alertTitle = @"山札の補充";
     NSString* alertMessage = @"山札がなくなったので、捨て札をシャッフルして新しい山札にしました";
+    
+    SCLAlertView* alert = [[SCLAlertView alloc] init];
+    alert.showAnimationType = SCLAlertViewShowAnimationSimplyAppear;
+    alert.hideAnimationType = SCLAlertViewHideAnimationSimplyDisappear;
+    
+    [alert.view setAccessibilityLabel:@"Alert_OK"];
+    
+    SCLButton* btnDone = [alert addButton:@"了解" actionBlock:nil];
+    
+    [btnDone setAccessibilityLabel:@"AlertBtn_OK"];   // テスト用
+    
+    [alert showInfo:self.vc
+              title:alertTitle
+           subTitle:alertMessage
+   closeButtonTitle:nil
+           duration:0];
+/*
     SCLAlertViewBuilder* alertBuilder = [SCLAlertViewBuilder new]
     .addButtonWithActionBlock(@"了解", nil)
     .showAnimationType(SCLAlertViewShowAnimationFadeIn)
     .hideAnimationType(SCLAlertViewHideAnimationFadeOut);
     
+        
     SCLAlertViewShowBuilder* showBuilder = [SCLAlertViewShowBuilder new]
     .style(SCLAlertViewStyleInfo)
     .title(alertTitle)
     .subTitle(alertMessage)
     .duration(0);
     [showBuilder showAlertView:alertBuilder.alertView onViewController:self.vc];
-    
+  */
 }
 
 -(void)showEmptyScene {
@@ -194,8 +212,10 @@
     SCLAlertView* alert = [[SCLAlertView alloc] init];
     alert.showAnimationType = SCLAlertViewShowAnimationSimplyAppear;
     alert.hideAnimationType = SCLAlertViewHideAnimationSimplyDisappear;
+    
+    [alert.view setAccessibilityLabel:@"Alert_NewChain"];  // テスト用
 
-    [alert addButton:@"通常の鎖" actionBlock:^{
+    SCLButton* btnChain = [alert addButton:@"通常の鎖" actionBlock:^{
         Arcana* target = [[Deck shared] takeTopDeck];
         if (!target) {
             [self showEmptyDeck];
@@ -207,6 +227,8 @@
         [[SoundManager shared] playSoundWithName:SOUND_MEKURU];
         [self showPutChain];
     }];
+    
+    [btnChain setAccessibilityLabel:@"AlertBtn_NormalChain"];   // テスト用
     
     [alert addButton:@"逆位置で鎖を渡す（悪徳）" actionBlock:^{
         Arcana* target = [[Deck shared] takeTopDeck];

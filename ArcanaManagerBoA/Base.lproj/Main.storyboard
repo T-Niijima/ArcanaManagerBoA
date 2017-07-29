@@ -74,6 +74,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="x4g-tt-CVg">
                                 <rect key="frame" x="184" y="28" width="120" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration" label="NewChain"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="9xB-Ci-e8q"/>
                                     <constraint firstAttribute="width" constant="120" id="b5h-Tx-vTn"/>
@@ -106,6 +107,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="qnD-N7-X04">
                                 <rect key="frame" x="16" y="420" width="120" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration" label="CollectChain"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="bjJ-f0-40y"/>
                                     <constraint firstAttribute="width" constant="120" id="i9s-MO-Dtg"/>
@@ -138,6 +140,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Z1h-4D-qs2">
                                 <rect key="frame" x="184" y="220" width="120" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration" label="ChangeScene"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="tQf-gD-7We"/>
                                     <constraint firstAttribute="height" constant="40" id="wwY-5Q-ogL"/>
@@ -229,6 +232,7 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZN-Nx-w9M">
                             <rect key="frame" x="98" y="400" width="120" height="40"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <accessibility key="accessibilityConfiguration" label="AddNewChain"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="120" id="GOe-P6-hpw"/>
                                 <constraint firstAttribute="height" constant="40" id="TdV-e8-8e2"/>
@@ -271,6 +275,7 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvW-9f-Kgw">
                             <rect key="frame" x="259" y="20" width="40" height="40"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <accessibility key="accessibilityConfiguration" label="CloseChain"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="Enw-ct-4U6"/>
                                 <constraint firstAttribute="width" constant="40" id="Xvw-Qz-TdF"/>
@@ -389,7 +394,7 @@
         <scene sceneID="kh2-IR-hMd">
             <objects>
                 <tableViewController id="QWG-az-X1q" customClass="DiscardTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ofM-qR-nJj">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Table_Chain" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ofM-qR-nJj">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -412,6 +417,9 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="Table_Chain"/>
+                        </userDefinedRuntimeAttributes>
                         <connections>
                             <outlet property="dataSource" destination="QWG-az-X1q" id="Oaj-bW-tNn"/>
                             <outlet property="delegate" destination="QWG-az-X1q" id="9iL-av-V0M"/>

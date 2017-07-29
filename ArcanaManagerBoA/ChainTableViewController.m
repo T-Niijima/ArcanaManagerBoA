@@ -32,12 +32,14 @@
                                                                   style:UIBarButtonItemStylePlain
                                                                    target:self
                                                                    action:@selector(tapBtnReturn:)];
+    [btnReturn setAccessibilityLabel:@"ButtonReturn"];
+    
     [[self navigationItem] setRightBarButtonItem:btnReturn];
     
     self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"TableBG"]];
     
     [btnReturn setEnabled:NO];  // デフォルトでは選択不可
-
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -137,7 +139,7 @@
     alert.showAnimationType = SCLAlertViewShowAnimationSimplyAppear;
     alert.hideAnimationType = SCLAlertViewHideAnimationSimplyDisappear;
 
-    [alert addButton:@"返却する" actionBlock:^{
+    SCLButton* button = [alert addButton:@"返却する" actionBlock:^{
         // --- 選択されたアルカナを返す処理をして、画面を戻す
         for (Arcana* arcana in setSelectedArcana) {
             [[Chain shared] returnChainWithArcana:arcana];
@@ -145,6 +147,8 @@
         [[SoundManager shared] playSoundWithName:SOUND_MEKURU];
         [self.navigationController popViewControllerAnimated:YES];
     }];
+    
+    [button setAccessibilityLabel:@"OK"];   // テスト用
     
     [alert showQuestion:self title:alertTitle subTitle:alertMessage closeButtonTitle:@"キャンセル" duration:0];
 }

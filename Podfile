@@ -6,3 +6,7 @@ target 'ArcanaManagerBoA' do
 	pod 'SCLAlertView-Objective-C'
 
 end
+
+target 'ArcanaManagerBoATests' do
+    pod 'KIF', :configurations => ['Debug']
+end

@@ -28,6 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "5F57A43D1F2B491E007B798C"
+               BuildableName = "ArcanaManagerBoAUITests.xctest"
+               BlueprintName = "ArcanaManagerBoAUITests"
+               ReferencedContainer = "container:ArcanaManagerBoA.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "5F57A44B1F2B4A9F007B798C"
+               BuildableName = "ArcanaManagerBoATests.xctest"
+               BlueprintName = "ArcanaManagerBoATests"
+               ReferencedContainer = "container:ArcanaManagerBoA.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

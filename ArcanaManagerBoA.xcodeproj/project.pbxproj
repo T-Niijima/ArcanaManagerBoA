@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F57A44F1F2B4A9F007B798C /* ArcanaManagerBoATests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F57A44E1F2B4A9F007B798C /* ArcanaManagerBoATests.m */; };
+		5F57A4581F2B4B9F007B798C /* ArcanaManagerBoATestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F57A4571F2B4B9F007B798C /* ArcanaManagerBoATestCase.m */; };
 		5FACFC331F1CBAF3005E014D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FACFC321F1CBAF3005E014D /* main.m */; };
 		5FACFC361F1CBAF3005E014D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FACFC351F1CBAF3005E014D /* AppDelegate.m */; };
 		5FACFC391F1CBAF3005E014D /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FACFC381F1CBAF3005E014D /* MainViewController.m */; };
@@ -27,11 +29,31 @@
 		5FF960BB1F20533300280CDE /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FF960BA1F20533300280CDE /* Media.xcassets */; };
 		5FF960BE1F20706F00280CDE /* Sheet.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 5FF960BD1F20706F00280CDE /* Sheet.pdf */; };
 		609883E28E328BA4DD6FEA05 /* Pods_ArcanaManagerBoA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F113BA5DC10D09D9AA2D3B4 /* Pods_ArcanaManagerBoA.framework */; };
+		74B3FFCE8846D67FD65A8832 /* libPods-ArcanaManagerBoATests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B012659B08B7177C8DDB1441 /* libPods-ArcanaManagerBoATests.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5F57A4511F2B4A9F007B798C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5FACFC261F1CBAF3005E014D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5FACFC2D1F1CBAF3005E014D;
+			remoteInfo = ArcanaManagerBoA;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		22A452654219C29F4F7922E8 /* Pods-ArcanaManagerBoA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArcanaManagerBoA.release.xcconfig"; path = "Pods/Target Support Files/Pods-ArcanaManagerBoA/Pods-ArcanaManagerBoA.release.xcconfig"; sourceTree = "<group>"; };
 		3AA238782E6603EDAB7A22C3 /* Pods-ArcanaManagerBoA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArcanaManagerBoA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ArcanaManagerBoA/Pods-ArcanaManagerBoA.debug.xcconfig"; sourceTree = "<group>"; };
+		4A103088059912BC531C7240 /* Pods-ArcanaManagerBoATests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArcanaManagerBoATests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ArcanaManagerBoATests/Pods-ArcanaManagerBoATests.release.xcconfig"; sourceTree = "<group>"; };
+		5A8C2D7F383FAEC69EFC6EE7 /* Pods-ArcanaManagerBoATests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArcanaManagerBoATests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ArcanaManagerBoATests/Pods-ArcanaManagerBoATests.debug.xcconfig"; sourceTree = "<group>"; };
+		5F57A4401F2B491E007B798C /* ArcanaManagerBoAUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArcanaManagerBoAUITests.m; sourceTree = "<group>"; };
+		5F57A4421F2B491E007B798C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F57A44C1F2B4A9F007B798C /* ArcanaManagerBoATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArcanaManagerBoATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F57A44E1F2B4A9F007B798C /* ArcanaManagerBoATests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArcanaManagerBoATests.m; sourceTree = "<group>"; };
+		5F57A4501F2B4A9F007B798C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F57A4561F2B4B9F007B798C /* ArcanaManagerBoATestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArcanaManagerBoATestCase.h; sourceTree = "<group>"; };
+		5F57A4571F2B4B9F007B798C /* ArcanaManagerBoATestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArcanaManagerBoATestCase.m; sourceTree = "<group>"; };
 		5FACFC2E1F1CBAF3005E014D /* ArcanaManagerBoA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArcanaManagerBoA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FACFC321F1CBAF3005E014D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5FACFC341F1CBAF3005E014D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -65,9 +87,18 @@
 		5FF960BA1F20533300280CDE /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		5FF960BD1F20706F00280CDE /* Sheet.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Sheet.pdf; sourceTree = "<group>"; };
 		6F113BA5DC10D09D9AA2D3B4 /* Pods_ArcanaManagerBoA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArcanaManagerBoA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B012659B08B7177C8DDB1441 /* libPods-ArcanaManagerBoATests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ArcanaManagerBoATests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5F57A4491F2B4A9F007B798C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74B3FFCE8846D67FD65A8832 /* libPods-ArcanaManagerBoATests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5FACFC2B1F1CBAF3005E014D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -83,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				6F113BA5DC10D09D9AA2D3B4 /* Pods_ArcanaManagerBoA.framework */,
+				B012659B08B7177C8DDB1441 /* libPods-ArcanaManagerBoATests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -92,14 +124,38 @@
 			children = (
 				3AA238782E6603EDAB7A22C3 /* Pods-ArcanaManagerBoA.debug.xcconfig */,
 				22A452654219C29F4F7922E8 /* Pods-ArcanaManagerBoA.release.xcconfig */,
+				5A8C2D7F383FAEC69EFC6EE7 /* Pods-ArcanaManagerBoATests.debug.xcconfig */,
+				4A103088059912BC531C7240 /* Pods-ArcanaManagerBoATests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		5F57A43F1F2B491E007B798C /* ArcanaManagerBoAUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5F57A4401F2B491E007B798C /* ArcanaManagerBoAUITests.m */,
+				5F57A4421F2B491E007B798C /* Info.plist */,
+			);
+			path = ArcanaManagerBoAUITests;
+			sourceTree = "<group>";
+		};
+		5F57A44D1F2B4A9F007B798C /* ArcanaManagerBoATests */ = {
+			isa = PBXGroup;
+			children = (
+				5F57A44E1F2B4A9F007B798C /* ArcanaManagerBoATests.m */,
+				5F57A4561F2B4B9F007B798C /* ArcanaManagerBoATestCase.h */,
+				5F57A4571F2B4B9F007B798C /* ArcanaManagerBoATestCase.m */,
+				5F57A4501F2B4A9F007B798C /* Info.plist */,
+			);
+			path = ArcanaManagerBoATests;
 			sourceTree = "<group>";
 		};
 		5FACFC251F1CBAF3005E014D = {
 			isa = PBXGroup;
 			children = (
 				5FACFC301F1CBAF3005E014D /* ArcanaManagerBoA */,
+				5F57A43F1F2B491E007B798C /* ArcanaManagerBoAUITests */,
+				5F57A44D1F2B4A9F007B798C /* ArcanaManagerBoATests */,
 				5FACFC2F1F1CBAF3005E014D /* Products */,
 				5ED336ED59E3E9C033E1020D /* Pods */,
 				247E408A70AF0CAFB0C46DCC /* Frameworks */,
@@ -110,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				5FACFC2E1F1CBAF3005E014D /* ArcanaManagerBoA.app */,
+				5F57A44C1F2B4A9F007B798C /* ArcanaManagerBoATests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -195,6 +252,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5F57A44B1F2B4A9F007B798C /* ArcanaManagerBoATests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F57A4531F2B4A9F007B798C /* Build configuration list for PBXNativeTarget "ArcanaManagerBoATests" */;
+			buildPhases = (
+				2ECB945ADFC261D7C1D1F33E /* [CP] Check Pods Manifest.lock */,
+				5F57A4481F2B4A9F007B798C /* Sources */,
+				5F57A4491F2B4A9F007B798C /* Frameworks */,
+				5F57A44A1F2B4A9F007B798C /* Resources */,
+				D71CAA8E1A2C3A56B09BB322 /* [CP] Embed Pods Frameworks */,
+				E303DC01DF3F3EC50AA779C0 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5F57A4521F2B4A9F007B798C /* PBXTargetDependency */,
+			);
+			name = ArcanaManagerBoATests;
+			productName = ArcanaManagerBoATests;
+			productReference = 5F57A44C1F2B4A9F007B798C /* ArcanaManagerBoATests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		5FACFC2D1F1CBAF3005E014D /* ArcanaManagerBoA */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5FACFC451F1CBAF3005E014D /* Build configuration list for PBXNativeTarget "ArcanaManagerBoA" */;
@@ -224,6 +302,12 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Takahiro Niijima";
 				TargetAttributes = {
+					5F57A44B1F2B4A9F007B798C = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = F6G2A6KWLN;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 5FACFC2D1F1CBAF3005E014D;
+					};
 					5FACFC2D1F1CBAF3005E014D = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = F6G2A6KWLN;
@@ -245,11 +329,19 @@
 			projectRoot = "";
 			targets = (
 				5FACFC2D1F1CBAF3005E014D /* ArcanaManagerBoA */,
+				5F57A44B1F2B4A9F007B798C /* ArcanaManagerBoATests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5F57A44A1F2B4A9F007B798C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5FACFC2C1F1CBAF3005E014D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -282,6 +374,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ArcanaManagerBoA/Pods-ArcanaManagerBoA-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		2ECB945ADFC261D7C1D1F33E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		4BE8A32098E073B0DB9FDE3C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -312,9 +419,48 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ArcanaManagerBoA/Pods-ArcanaManagerBoA-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D71CAA8E1A2C3A56B09BB322 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ArcanaManagerBoATests/Pods-ArcanaManagerBoATests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E303DC01DF3F3EC50AA779C0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ArcanaManagerBoATests/Pods-ArcanaManagerBoATests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5F57A4481F2B4A9F007B798C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F57A4581F2B4B9F007B798C /* ArcanaManagerBoATestCase.m in Sources */,
+				5F57A44F1F2B4A9F007B798C /* ArcanaManagerBoATests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5FACFC2A1F1CBAF3005E014D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -336,6 +482,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		5F57A4521F2B4A9F007B798C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5FACFC2D1F1CBAF3005E014D /* ArcanaManagerBoA */;
+			targetProxy = 5F57A4511F2B4A9F007B798C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		5FACFC3A1F1CBAF3005E014D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -356,6 +510,34 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		5F57A4541F2B4A9F007B798C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A8C2D7F383FAEC69EFC6EE7 /* Pods-ArcanaManagerBoATests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = F6G2A6KWLN;
+				INFOPLIST_FILE = ArcanaManagerBoATests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rizastar.ArcanaManagerBoATests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ArcanaManagerBoA.app/ArcanaManagerBoA";
+			};
+			name = Debug;
+		};
+		5F57A4551F2B4A9F007B798C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A103088059912BC531C7240 /* Pods-ArcanaManagerBoATests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = F6G2A6KWLN;
+				INFOPLIST_FILE = ArcanaManagerBoATests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rizastar.ArcanaManagerBoATests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ArcanaManagerBoA.app/ArcanaManagerBoA";
+			};
+			name = Release;
+		};
 		5FACFC431F1CBAF3005E014D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -484,6 +666,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5F57A4531F2B4A9F007B798C /* Build configuration list for PBXNativeTarget "ArcanaManagerBoATests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F57A4541F2B4A9F007B798C /* Debug */,
+				5F57A4551F2B4A9F007B798C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		5FACFC291F1CBAF3005E014D /* Build configuration list for PBXProject "ArcanaManagerBoA" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
